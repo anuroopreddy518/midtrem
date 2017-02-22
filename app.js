@@ -10,6 +10,9 @@ var config = require('./config/globalVars');
 
 //  mongodb
 mongoose.connect(config.mongodb);
+var conn = mongoose.connection;
+
+conn.on('error', console.error.bind(console, 'connection error:'));
 
 var index = require('./routes/index');
 var users = require('./routes/users');
