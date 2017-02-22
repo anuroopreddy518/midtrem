@@ -1,5 +1,5 @@
 // config.js
 
 module.exports = {
-  mongodb: 'mongodb://localhost/comp2068'
+  mongodb: 'mongodb://anuroop:pass2017@ds023064.mlab.com:23064/comp2068'
 }
