@@ -4,6 +4,12 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+// include the mongoose package
+var mongoose = require('mongoose');
+var config = require('./config/globalVars');
+
+//  mongodb
+mongoose.connect(config.mongodb);
 
 var index = require('./routes/index');
 var users = require('./routes/users');
